@@ -37,9 +37,6 @@ class _HomePageState extends State<HomePage> {
           data = response.body.toString();
         });
       } else if (response.statusCode == 401) {
-        // Token expired, attempt to refresh the token
-        // You need to implement a token refresh mechanism
-        // After obtaining a new token, retry the API request
         print('Token expired. Attempting to refresh...');
       } else {
         // Handle other API request failures
