@@ -39,11 +39,9 @@ class _HomePageState extends State<HomePage> {
       } else if (response.statusCode == 401) {
         print('Token expired. Attempting to refresh...');
       } else {
-        // Handle other API request failures
         print('API request failed: ${response.body}');
       }
     } else {
-      // Handle missing token (user is not authenticated)
       print('Token is missing. User is not authenticated.');
     }
   }
