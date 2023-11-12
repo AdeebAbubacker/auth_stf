@@ -36,20 +36,16 @@ class _RegsiterPageState extends State<RegsiterPage> {
 
     if (response.statusCode == 200) {
       var token = response.body;
-      // ignore: avoid_print
       print("token");
-      // ignore: use_build_context_synchronously
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
           return const HomePage();
         },
       ));
-      // Handle successful login
-      // ignore: avoid_print
+
       print('registeration successful!');
     } else {
-      // Handle login failure
-      // ignore: avoid_print
+
       print('Login failed: ${response.body}');
     }
   }
