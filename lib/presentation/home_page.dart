@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
 
     if (token != null) {
       final String url = 'http://192.168.1.6:3000/fetchdata';
-
+//sdddddddddddddddddddddddddddd
       final http.Response response = await http.get(
         Uri.parse(url),
         headers: {'Authorization': 'Bearer $token'},
@@ -37,8 +37,6 @@ class _HomePageState extends State<HomePage> {
           data = response.body.toString();
         });
 
-        //ssdds
-        //dsfsd
       } else if (response.statusCode == 401) {
         print('Token expired. Attempting to refresh...');
       } else {
